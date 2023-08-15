@@ -86,6 +86,7 @@ function Menu() {
 }
 
 function Pizza(props) {
+  if (props.pizzaObject.soldOut) return null;
   return (
     <li className="pizza">
       <img src={props.pizzaObject.photoName} alt={props.pizzaObject.name} />
